@@ -1,0 +1,181 @@
+{
+  "personal_info": {
+    "name": "Karim Khaled",
+    "headline": "Étudiant en Systèmes informatiques et Mobiles à Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+    "company": null,
+    "school": "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+    "location": "Ben Arous Governorate, Tunisia",
+    "summary": null,
+    "image": "https://media.licdn.com/dms/image/C4D03AQGSx7JgEnX_Bg/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=HBuscI5CUzsKeXnBh8N_HGZ2YMk4C0t0s_eHq_dV76A",
+    "followers": "",
+    "email": null,
+    "phone": null,
+    "connected": null,
+    "websites": [],
+    "current_company_link": ""
+  },
+  "experiences": {
+    "jobs": [
+      {
+        "title": "Projet de fin d’études",
+        "company": "Société Tunisienne de Banque \"STB\"",
+        "date_range": "Feb 2017 – Apr 2017",
+        "location": null,
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/11810937/"
+      },
+      {
+        "title": "Stagiaire été",
+        "company": "SNCFT",
+        "date_range": "2016 – Jul 2016",
+        "location": null,
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/7089509/"
+      },
+      {
+        "title": "Stagiaire été",
+        "company": "Société Tunisienne de Banque \"STB\"",
+        "date_range": "2015 – Jul 2015",
+        "location": null,
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/11810937/"
+      }
+    ],
+    "education": [
+      {
+        "name": "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+        "degree": "Diplôme d'ingénieur en Systèmes informatiques et Mobiles",
+        "grades": null,
+        "field_of_study": "Informatique",
+        "date_range": "2018 – 2020",
+        "activities": null
+      },
+      {
+        "name": "Institut Supérieur de Gestion de Tunis",
+        "degree": "Master en sciences et techniques de l'informatique de décision",
+        "grades": null,
+        "field_of_study": "Informatique",
+        "date_range": "2017 – 2018",
+        "activities": null
+      },
+      {
+        "name": "Ecole Supérieure des Sciences Economiques et Commerciales de Tunis",
+        "degree": "Licence en Informatique Appliquée à la Gestion",
+        "grades": null,
+        "field_of_study": "Informatique",
+        "date_range": "2014 – 2017",
+        "activities": null
+      },
+      {
+        "name": "Lycée Ibnou Rachiq Ezzahra",
+        "degree": "Baccalauréat",
+        "grades": null,
+        "field_of_study": "Mathématiques",
+        "date_range": "2010 – 2014",
+        "activities": null
+      }
+    ],
+    "volunteering": []
+  },
+  "skills": [
+    {
+      "name": "Android",
+      "endorsements": 0
+    },
+    {
+      "name": "Java",
+      "endorsements": 0
+    },
+    {
+      "name": "JavaScript",
+      "endorsements": 0
+    },
+    {
+      "name": "Java Enterprise Edition",
+      "endorsements": 0
+    },
+    {
+      "name": "JSON",
+      "endorsements": 0
+    },
+    {
+      "name": "HTML",
+      "endorsements": 0
+    },
+    {
+      "name": "XHTML",
+      "endorsements": 0
+    },
+    {
+      "name": "XML",
+      "endorsements": 0
+    },
+    {
+      "name": "SOAP",
+      "endorsements": 0
+    },
+    {
+      "name": "PHP",
+      "endorsements": 0
+    },
+    {
+      "name": "PhpMyAdmin",
+      "endorsements": 0
+    },
+    {
+      "name": "Visual Basic .NET (VB.NET)",
+      "endorsements": 0
+    },
+    {
+      "name": "Oracle Database",
+      "endorsements": 0
+    },
+    {
+      "name": "Oracle SQL Developer",
+      "endorsements": 0
+    },
+    {
+      "name": "Microsoft Office",
+      "endorsements": 0
+    },
+    {
+      "name": "J2EE Web Services",
+      "endorsements": 0
+    },
+    {
+      "name": "Android Studio",
+      "endorsements": 0
+    },
+    {
+      "name": "Développement d’applications mobiles",
+      "endorsements": 0
+    },
+    {
+      "name": "Services web RESTful",
+      "endorsements": 0
+    },
+    {
+      "name": "Services web",
+      "endorsements": 0
+    }
+  ],
+  "accomplishments": {
+    "publications": [],
+    "certifications": [],
+    "patents": [],
+    "courses": [],
+    "projects": [],
+    "honors": [],
+    "test_scores": [],
+    "languages": [],
+    "organizations": []
+  },
+  "interests": [
+    "Tunisie Télécom",
+    "BIAT",
+    "Amaris",
+    "Ooredoo Tunisie",
+    "Oracle",
+    "OpenClassrooms"
+  ]
+}

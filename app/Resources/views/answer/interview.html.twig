@@ -1,0 +1,161 @@
+{% extends '@Auth/Default/base.html.twig' %}
+
+{% block body %}
+
+
+
+
+
+
+<!-- Page header -->
+<header class="page-header bg-img size-lg" style="background-image: url({{ asset('template/img/bg-banner1.jpg') }})">
+    <div style="padding: 100px;margin-bottom: 260px" class="container no-shadow">
+        <h1 class="text-center">Interview</h1>
+        <p class="lead text-center"></p>
+
+        <hr>
+
+        <!-- Job detail -->
+        <a class="item-block item-block-flat" href="job-detail.html">
+            <header>
+
+                    <div id="temp"></div>
+                    <div id="result"></div>
+
+
+                <script
+                        src="https://code.jquery.com/jquery-3.4.0.min.js"
+                        integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+                        crossorigin="anonymous"></script>
+
+                <script>
+
+                    var questions;
+                    var results = [];
+                    var index = 0;
+                    var first = false;
+                    window.SpeechRecognition = window.webkitSpeechRecognition || window.SpeechRecognition;
+                    let finalTranscript = '';
+                    let recognition = new window.SpeechRecognition();
+
+                    $(document).ready(function () {
+
+                        $.ajax({
+                            url: '{{ path('question_all') }}',
+                            contentType: "application/json",
+                            dataType: 'json',
+                            success: function (result) {
+                                questions=result;
+                                questions.forEach(function (element) {
+                                    var question = {
+                                        "idQuestion": element.id,
+                                        "question": element.text,
+                                        "response": ""
+                                    };
+                                    results.push(question);
+                                });
+                            }
+                        });
+
+                        function sendDatatoDB() {
+                            $.ajax({
+                                url: "{{ path('send_answers') }}",
+                                type: "POST",
+                                data: {
+                                    answers: results,
+                                },
+                                success: function (response) {
+                                    //document.getElementById("total_items").value=response;
+                                    console.log("done !!");
+                                    alert("thank you for the interview");
+                                    window.location.replace("/");
+
+                                },
+                                error: function () {
+                                    alert("error");
+                                }
+
+                            });
+                        }
+
+                        function startRecognition() {
+                            recognition.lang = 'en-US';
+                            recognition.interimResults = true;
+                            recognition.maxAlternatives = 10;
+                            recognition.continuous = true;
+                            recognition.onresult = (event) => {
+                                let interimTranscript = '';
+                                for (let i = event.resultIndex, len = event.results.length; i < len; i++) {
+                                    let transcript = event.results[i][0].transcript;
+                                    if (event.results[i].isFinal) {
+                                        if ((transcript.toLowerCase().trim() === ("begin") || transcript.toLowerCase().trim() === ("rico") || transcript.toLowerCase().trim() === ("riku")) && !first) {
+                                            nextConvo();
+                                            first = true;
+                                        }
+                                        if ((transcript.toLowerCase().trim() === "next question") && first) {
+                                            nextConvo();
+                                        }
+
+                                        finalTranscript += transcript;
+                                    } else {
+                                        interimTranscript += transcript;
+                                    }
+                                }
+                                document.getElementById('temp').innerHTML = finalTranscript + '<i style="color:#ddd;">' + interimTranscript + '</i>';
+                            };
+                            recognition.start();
+                        }
+
+                        function nextConvo() {
+
+                            recognition.stop();
+
+                            if (index > 0) {
+                                document.getElementById('result').innerHTML += "<br>" + finalTranscript + "<br> ----------------- <br>";
+                                results[index - 1]["response"] = finalTranscript;
+                            }
+                            setTimeout(function () {
+                                if (index <= results.length - 1) {
+                                    finalTranscript = "";
+                                    document.getElementById('result').innerHTML += "<br>" + results[index]["question"];
+                                    index++;
+                                    recognition.start();
+                                } else {
+                                    sendDatatoDB();
+                                    console.log(results);
+                                }
+                            }, 1000);
+
+
+                        }
+
+                        startRecognition();
+
+                    });
+
+
+                </script>
+                <script>
+
+
+                </script>
+
+            </header>
+        </a>
+        <!-- END Job detail -->
+
+    </div>
+</header>
+<!-- END Page header -->
+
+
+<!-- Main container -->
+<main>
+
+
+    <!-- Apply with resume -->
+    <!-- END Apply with resume -->
+
+</main>
+<!-- END Main container -->
+{% endblock %}

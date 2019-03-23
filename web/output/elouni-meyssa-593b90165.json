@@ -1,0 +1,71 @@
+{
+  "personal_info": {
+    "name": "ELOUNI Meyssa",
+    "headline": "Étudiant à Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+    "company": null,
+    "school": "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+    "location": "Mannouba, Mannouba Governorate, Tunisia",
+    "summary": null,
+    "image": "https://media.licdn.com/dms/image/C5603AQEE4CkHiciiCQ/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=js05SEa-wxpJnkJhXOq47INNROMm-gmHJA55Kl43XjA",
+    "followers": "",
+    "email": null,
+    "phone": null,
+    "connected": null,
+    "websites": [],
+    "current_company_link": ""
+  },
+  "experiences": {
+    "jobs": [],
+    "education": [
+      {
+        "name": "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+        "degree": null,
+        "grades": null,
+        "field_of_study": null,
+        "date_range": "2018 – 2020",
+        "activities": null
+      },
+      {
+        "name": "Institut Supérieur d'art et multimedia",
+        "degree": "Licence fondamentale en science informatique",
+        "grades": "assez bien",
+        "field_of_study": "Informatique",
+        "date_range": "2014 – 2017",
+        "activities": null
+      }
+    ],
+    "volunteering": []
+  },
+  "skills": [
+    {
+      "name": "java",
+      "endorsements": 0
+    },
+    {
+      "name": "JavaScript",
+      "endorsements": 0
+    },
+    {
+      "name": "HTML",
+      "endorsements": 0
+    },
+    {
+      "name": "Symfony",
+      "endorsements": 0
+    }
+  ],
+  "accomplishments": {
+    "publications": [],
+    "certifications": [],
+    "patents": [],
+    "courses": [],
+    "projects": [],
+    "honors": [],
+    "test_scores": [],
+    "languages": [],
+    "organizations": []
+  },
+  "interests": [
+    "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT"
+  ]
+}

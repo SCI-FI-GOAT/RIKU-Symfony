@@ -1,0 +1,24 @@
+interview_index:
+    path:     /
+    defaults: { _controller: "InterviewBundle:Interview:index" }
+    methods:  GET
+
+interview_show:
+    path:     /{id}/show
+    defaults: { _controller: "InterviewBundle:Interview:show" }
+    methods:  GET
+
+interview_new:
+    path:     /new
+    defaults: { _controller: "InterviewBundle:Interview:new" }
+    methods:  [GET, POST]
+
+interview_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "InterviewBundle:Interview:edit" }
+    methods:  [GET, POST]
+
+interview_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "InterviewBundle:Interview:delete" }
+    methods:  DELETE

@@ -1,0 +1,58 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Offres list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idoffre</th>
+                <th>Titleoffre</th>
+                <th>Descriptionoffre</th>
+                <th>Experienceoffre</th>
+                <th>Salaireoffre</th>
+                <th>Technologiesoffre</th>
+                <th>Langageoffre</th>
+                <th>Locationoffre</th>
+                <th>Dateoffre</th>
+                <th>Typeoffre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for offre in offres %}
+            <tr>
+                <td><a href="{{ path('offre_show', { 'idOffre': offre.idOffre }) }}">{{ offre.idOffre }}</a></td>
+                <td>{{ offre.titleOffre }}</td>
+                <td>{{ offre.descriptionOffre }}</td>
+                <td>{{ offre.experienceOffre }}</td>
+                <td>{{ offre.salaireOffre }}</td>
+                <td>{{ offre.technologiesOffre }}</td>
+                <td>{{ offre.langageOffre }}</td>
+                <td>{{ offre.LocationOffre }}</td>
+                <td>{% if offre.dateOffre %}{{ offre.dateOffre|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ offre.typeOffre }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('offre_show', { 'idOffre': offre.idOffre }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('offre_edit', { 'idOffre': offre.idOffre }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    {{ matchings | json_encode }}
+    <ul>
+        <li>
+            <a href="{{ path('offre_new') }}">Create a new offre</a>
+        </li>
+    </ul>
+{% endblock %}
+
+

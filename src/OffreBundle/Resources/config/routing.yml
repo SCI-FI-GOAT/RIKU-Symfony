@@ -1,0 +1,4 @@
+offre_offre:
+    resource: "@OffreBundle/Resources/config/routing/offre.yml"
+    prefix:   /offre
+

@@ -1,0 +1,88 @@
+{
+  "personal_info": {
+    "name": "Wajdi Dahech",
+    "headline": "Student at Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+    "company": null,
+    "school": "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+    "location": "Nabeul Governorate, Tunisia",
+    "summary": "I am, in a nutshell, a big geek, who takes great pride and joy in making other geeks into bigger and better (and hopefully more highly rewarded) geeks.",
+    "image": "https://media.licdn.com/dms/image/C4D03AQGst9U7Bf6SaQ/profile-displayphoto-shrink_200_200/0?e=1558569600&v=beta&t=tM_DebavgG7ehhmj2UBH9TNaEl1TAHLvpuy63yXEx0M",
+    "followers": "",
+    "email": "dahechwajdi@gmail.com",
+    "phone": null,
+    "connected": null,
+    "websites": [],
+    "current_company_link": ""
+  },
+  "experiences": {
+    "jobs": [
+      {
+        "title": "Software java Engineer",
+        "company": "Google",
+        "date_range": "Sep 2017 – Dec 2018",
+        "location": "Stockton, California Area",
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/1441/"
+      },
+      {
+        "title": "Principal CEO",
+        "company": "LinkedIn",
+        "date_range": "Jan 2014 – May 2016",
+        "location": "United States",
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/1337/"
+      },
+      {
+        "title": "Mobile ios Developer",
+        "company": "Twitch",
+        "date_range": "Jan 2012 – Dec 2013",
+        "location": "France",
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/2320329/"
+      },
+      {
+        "title": "Web php Developer",
+        "company": "GitHub",
+        "date_range": "Jan 2009 – Dec 2011",
+        "location": "Tokyo, Japan",
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/1418841/"
+      }
+    ],
+    "education": [
+      {
+        "name": "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+        "degree": "Engineer's degree",
+        "grades": null,
+        "field_of_study": "Computer Science",
+        "date_range": "2017 – 2020",
+        "activities": null
+      }
+    ],
+    "volunteering": []
+  },
+  "skills": [
+    {
+      "name": "Android Development",
+      "endorsements": 0
+    },
+    {
+      "name": "iOS Development",
+      "endorsements": 0
+    }
+  ],
+  "accomplishments": {
+    "publications": [],
+    "certifications": [],
+    "patents": [],
+    "courses": [],
+    "projects": [],
+    "honors": [],
+    "test_scores": [],
+    "languages": [],
+    "organizations": []
+  },
+  "interests": [
+    "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT"
+  ]
+}

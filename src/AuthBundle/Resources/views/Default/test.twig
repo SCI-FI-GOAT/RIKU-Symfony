@@ -1,0 +1,179 @@
+{% extends '@Auth/Default/base.html.twig' %}
+
+
+{% block title %}<title>TheJobs - Resume detail</title>{% endblock %}
+{% block body %}
+<!-- Page header -->
+<header class="page-header bg-img" style="background-image: url({{ asset('template/img/bg-banner1.jpg') }})">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-4">
+                <img src="{{ json['personal_info']['image'] }}" alt="">
+            </div>
+
+            <div class="col-xs-12 col-sm-8 header-detail">
+                <div class="hgroup">
+                    <h1>{{ json['personal_info']['name'] }}</h1>
+                    <h3>{{ json['personal_info']['headline'] }}</h3>
+                </div>
+                <hr>
+                <p class="lead">{{ json['personal_info']['summary'] }}</p>
+
+                <ul class="details cols-2">
+                    {% if json['personal_info']['location'] != null %}
+                    <li>
+                        <i class="fa fa-map-marker"></i>
+                        <span>{{ json['personal_info']['location'] }}</span>
+                    </li>
+                    {% endif %}
+                    {% if json['personal_info']['websites'] != null %}
+                    <li>
+                        <i class="fa fa-globe"></i>
+                        <a href="#">{{ json['personal_info']['websites'][0] }}</a>
+                    </li>
+                    {% endif %}
+
+                    {% if json['personal_info']['phone'] != null %}
+                    <li>
+                        <i class="fa fa-phone"></i>
+                        <span>{{ json['personal_info']['phone']}}</span>
+                    </li>
+                    {% endif %}
+                    {% if json['personal_info']['email'] != null %}
+                    <li>
+                        <i class="fa fa-envelope"></i>
+                        <a href="#">{{ json['personal_info']['email']}}</a>
+                    </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="button-group">
+            <ul class="social-icons">
+                <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                <li><a class="dribbble" href="#"><i class="fa fa-dribbble"></i></a></li>
+                <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+            </ul>
+        </div>
+    </div>
+</header>
+<!-- END Page header -->
+
+
+<!-- Main container -->
+<main>
+
+
+    <!-- Education -->
+    <section>
+        <div class="container">
+
+            <header class="section-header">
+                <span>Latest degrees</span>
+                <h2>Education</h2>
+            </header>
+
+            <div class="row">
+                {% for item in json['experiences']['education'] %}
+                <div class="col-xs-12">
+                    <div class="item-block">
+                        <header>
+                            <img src="assets/img/logo-mit.png" alt="">
+                            <div class="hgroup">
+                                <h4>{{ item['degree'] }} <small>{{ item['field_of_study'] }}</small></h4>
+                                <h5>{{ item['name'] }}</h5>
+                            </div>
+                            <h6 class="time">{{ item['date_range'] }}</h6>
+                        </header>
+                        <div class="item-body">
+                            <p></p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+    <!-- END Education -->
+
+
+    <!-- Work Experience -->
+    <section class="bg-alt">
+        <div class="container">
+            <header class="section-header">
+                <span>Past positions</span>
+                <h2>Work Experience</h2>
+            </header>
+
+            <div class="row">
+                {% for item in json['experiences']['jobs'] %}
+                <!-- Work item -->
+                <div class="col-xs-12">
+                    <div class="item-block">
+                        <header>
+                            <img src="assets/img/logo-google.jpg" alt="">
+                            <div class="hgroup">
+                                <h4>{{ item['company'] }}</h4>
+                                <h5>{{ item['title'] }}</h5>
+                            </div>
+                            <h6 class="time">{{ item['date_range'] }}</h6>
+                        </header>
+                        <div class="item-body">
+                            <p>{{ item['description'] }}</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- END Work item -->
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+    <!-- END Work Experience -->
+
+
+    <!-- Skills -->
+    <section>
+        <div class="container">
+            <header class="section-header">
+                <span>Expertise Areas</span>
+                <h2>Skills</h2>
+            </header>
+
+            <br>
+            <ul class="skills cols-3">
+                {% for item in json['skills'] %}
+                <li>
+                    <div>
+                        <span class="skill-name">{{ item['name'] }}</span>
+                        <span class="skill-value">{%   set rand = random(['70','75','80','85','90','95','100']) %}</span>
+                        <span class="skill-value">{{ rand }}</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: {{ rand }}%;"></div>
+                    </div>
+                </li>
+                {% endfor %}
+                <li>
+                    <div>
+                        <span class="skill-name">Team work</span>
+                        <span class="skill-value">90%</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 90%;"></div>
+                    </div>
+                </li>
+            </ul>
+
+        </div>
+    </section>
+    <!-- END Skills -->
+
+
+</main>
+<!-- END Main container -->
+{% endblock %}

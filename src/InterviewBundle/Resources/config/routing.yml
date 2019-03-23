@@ -1,0 +1,4 @@
+interview_question:
+    resource: "@InterviewBundle/Resources/config/routing/question.yml"
+    prefix:   /question
+

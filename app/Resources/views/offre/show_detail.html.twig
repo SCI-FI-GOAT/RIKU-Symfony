@@ -1,0 +1,69 @@
+{% extends '@Auth/Default/base.html.twig' %}
+{% block body %}
+<!-- Page header -->
+<header class="page-header bg-img size-lg" style="background-image: url({{ asset('template/img/bg-banner2.jpg')}})">
+    <div class="container">
+        <div class="header-detail">
+            <img class="logo" src="{{ offre.user.company_img }}" alt="">
+            <div class="hgroup">
+                <h1>{{ offre.titleOffre }}</h1>
+                <h3><a href="#">{{ offre.user}}</a></h3>
+            </div>
+            <time datetime="2016-03-03 20:00">{% if offre.dateOffre %}{{ offre.dateOffre|date('Y-m-d') }}{% endif %}</time>
+            <hr>
+            <p class="lead">{{ offre.descriptionOffre }}</p>
+
+            <ul class="details cols-3">
+                <li>
+                    <i class="fa fa-map-marker"></i>
+                    <span>{{ offre.LocationOffre }}</span>
+                </li>
+
+                <li>
+                    <i class="fa fa-briefcase"></i>
+                    <span>{{ offre.typeOffre }}</span>
+                </li>
+
+                <li>
+                    <i class="fa fa-money"></i>
+                    <span>{{ offre.salaireOffre }} DT / month</span>
+                </li>
+
+                <li>
+                    <i class="fa fa-certificate"></i>
+                    <a href="#">{{ offre.langageOffre }}</a>
+                </li>
+
+                <li>
+                    <i class="fa fa-flask"></i>
+                    <span>{{ offre.experienceOffre }} years experience</span>
+                </li>
+
+
+                <li>
+                    <i class="fa fa-desktop"></i>
+                    <i class="fa fa-tablet"></i>
+                    <span>{{ offre.technologiesOffre }}</span>
+                </li>
+
+            </ul>
+
+            <div class="button-group">
+                <ul class="social-icons">
+                    <li class="title">Share on</li>
+                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a class="google-plus" href="#"><i class="fa fa-google-plus"></i></a></li>
+                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+
+                <div class="action-buttons">
+                    <a class="btn btn-success" href="{{ path('answer_interview') }}">Apply now</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</header>
+<!-- END Page header -->
+{% endblock %}

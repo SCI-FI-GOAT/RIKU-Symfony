@@ -1,0 +1,82 @@
+{
+  "personal_info": {
+    "name": "Med Amine Brahmi",
+    "headline": "Student at Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+    "company": "Facebook",
+    "school": "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+    "location": "Nabeul Governorate, Tunisia",
+    "summary": "I am, in a nutshell, a big geek, who takes great pride and joy in making other geeks into bigger and better (and hopefully more highly rewarded) geeks. Recently, I have stepped into the management role, looking for ways to leverage my skills as a \"force multiplier\" across the entire team, so as to better the team (and the organization) as a whole.I have spent the last fifteen years diving into the technology industry, starting from my first forays into C++ with the help of Bjarne Stroustrup's \"The C++ Programming Language\", into Windows (both 16- and 32-bit), then Java, .NET, and now pretty much anything that seems interesting, including languages (both programming and domain-specific), virtual machines (most notably the JVM and CLR, but also the various Smalltalk VMs like Strongtalk or Squeak, and Parrot), large-scale enterprise systems, and agile development practices. I have worked on projects that were intended for public-facing customer bases in the millions, and on projects that ran headlessly on server machines in the basement.I currently consult to a variety of companies, including Microsoft, IBM and Sun, I teach .NET through Pluralsight and other topics independently, and I spend my time researching new technologies and applying them to customers' problems. I can be found at a variety of conferences, including the No Fluff Just Stuff Software Symposia (http://www.nofluffjuststuff.com), via my blog at http://blogs.tedneward.com, or as the interviewer for the \"On Software\" series of videocasts released by Pearson on iTunes. Or, do what we all do anyway, and just Google my name--you'll find me.Contact me if you think I can help you with your own IT projects and staff.Specialties: Architecture, Java (language, JVM), J2EE/JavaEE (including large-scale), .NET (CLR), C# (language), NodeJS, Angular, React, C++ (including C++/CLI), Python, other languages (including development of new languages), virtual machine (JVM, CLR, etc) internals\n...",
+    "image": "https://media.licdn.com/dms/image/C5603AQFw0Mh70d6u7w/profile-displayphoto-shrink_800_800/0?e=1557360000&v=beta&t=D33qWM9yJJJFWZaF73C5ZSHdgIB4UN-2bhCtxbx9IoI",
+    "followers": "",
+    "email": null,
+    "phone": null,
+    "connected": null,
+    "websites": [],
+    "current_company_link": "https://www.linkedin.com/company/10667/"
+  },
+  "experiences": {
+    "jobs": [
+      {
+        "title": "Mobile Developer",
+        "company": "Facebook",
+        "date_range": "Nov 2018 – Present",
+        "location": "Greater Los Angeles Area",
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/10667/"
+      },
+      {
+        "title": "Web Developer",
+        "company": "Apple",
+        "date_range": "Jun 2014 – Jun 2016",
+        "location": "London, United Kingdom",
+        "description": null,
+        "li_company_url": "https://www.linkedin.com/company/162479/"
+      }
+    ],
+    "education": [
+      {
+        "name": "Ecole Supérieure Privée d'Ingénierie et de Technologies - ESPRIT",
+        "degree": "Bachelor's degree",
+        "grades": null,
+        "field_of_study": "Computer and Information Sciences and Support Services",
+        "date_range": "2016 – 2020",
+        "activities": null
+      }
+    ],
+    "volunteering": []
+  },
+  "skills": [
+    {
+      "name": "Data Analysis",
+      "endorsements": 0
+    },
+    {
+      "name": "Mobile Applications",
+      "endorsements": 0
+    },
+    {
+      "name": "Blockchain",
+      "endorsements": 0
+    },
+    {
+      "name": "Web Design",
+      "endorsements": 0
+    },
+    {
+      "name": "Mobile Design",
+      "endorsements": 0
+    }
+  ],
+  "accomplishments": {
+    "publications": [],
+    "certifications": [],
+    "patents": [],
+    "courses": [],
+    "projects": [],
+    "honors": [],
+    "test_scores": [],
+    "languages": [],
+    "organizations": []
+  },
+  "interests": []
+}

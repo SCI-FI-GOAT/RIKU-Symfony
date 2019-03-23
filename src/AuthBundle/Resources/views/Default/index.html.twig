@@ -1,0 +1,10 @@
+{% if app.user is not empty %}
+    {% if is_granted('ROLE_ENTREPRISE') %}
+        role entreprise
+    {% endif %}
+    {% if is_granted('ROLE_CANDIDAT') %}
+        {% include "@Auth/Default/indexCandidat.html.twig" %}
+
+    {% endif %}
+{{ app.user.username }}
+{% endif %}

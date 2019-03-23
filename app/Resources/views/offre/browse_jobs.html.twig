@@ -1,0 +1,196 @@
+{% extends '@Auth/Default/base.html.twig' %}
+
+{% block title %} <title>TheJobs - Job list</title> {% endblock %}
+{% block body %}
+    <!-- Page header -->
+    <header class="page-header bg-img" style="background-image: url({{ asset('template/img/bg-banner1.jpg') }});">
+        <div class="container page-name">
+            <h1 class="text-center">Browse jobs</h1>
+            <p class="lead text-center">Use following search box to find jobs that fits you better</p>
+        </div>
+
+        <div class="container">
+            <form action="#">
+
+                <div class="row">
+                    <div class="form-group col-xs-12 col-sm-4">
+                        <input type="text" class="form-control" placeholder="Keyword: job title">
+                    </div>
+
+                    <div class="form-group col-xs-12 col-sm-4">
+                        <input type="text" class="form-control" placeholder="Location: city, state">
+                    </div>
+
+                    <div class="form-group col-xs-12 col-sm-4">
+                        <input type="text" class="form-control" placeholder="Company">
+                    </div>
+
+
+                    <div class="form-group col-xs-12 col-sm-4">
+                        <h6>Contract</h6>
+                        <div class="checkall-group">
+                            <div class="checkbox">
+                                <input type="checkbox" id="contract1" name="contract" checked>
+                                <label for="contract1">All types</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="contract2" name="contract">
+                                <label for="contract2">Full-time </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="contract3" name="contract">
+                                <label for="contract3">Part-time </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="contract4" name="contract">
+                                <label for="contract4">Internship </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="contract5" name="contract">
+                                <label for="contract5">Freelance </label>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="form-group col-xs-12 col-sm-4">
+                        <h6>Monthly rate</h6>
+                        <div class="checkall-group">
+                            <div class="checkbox">
+                                <input type="checkbox" id="rate1" name="rate" checked>
+                                <label for="rate1">All rates</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="rate2" name="rate">
+                                <label for="rate2">0 DT - 500 DT </label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="rate3" name="rate">
+                                <label for="rate3">500 DT - 1000 DT</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="rate4" name="rate">
+                                <label for="rate4">1000 DT - 2000 DT</label>
+                            </div>
+
+                            <div class="checkbox">
+                                <input type="checkbox" id="rate5" name="rate">
+                                <label for="rate5">2000+ DT</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="button-group">
+                    <div class="action-buttons">
+                        <button class="btn btn-primary">Apply filter</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+
+    </header>
+    <!-- END Page header -->
+
+
+    <!-- Main container -->
+    <main>
+        <section class="no-padding-top bg-alt">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-xs-12">
+                        <br>
+                        <h5>We found <strong>357</strong> matches, you're watching <i>10</i> to <i>20</i></h5>
+                    </div>
+
+                    <!-- Job item -->
+                    {% for offre in offres %}
+                    <div class="col-xs-12">
+                        <a class="item-block" href="{{ path('show_detail', { 'id': offre.idOffre }) }}">
+                            <header>
+                                <img src="{{ offre.user.company_img}}" alt="">
+                                <div class="hgroup">
+                                    <h4>{{ offre.titleOffre }}</h4>
+                                    <h5>{{ offre.user }}  {% if offre.typeOffre == 'Full-time' %}
+                                            <span class="label label-success">Full-time</span>
+                                        {% endif %}
+                                        {% if offre.typeOffre == 'Internship' %}
+                                            <span class="label label-danger">Internship</span>
+                                        {% endif %}
+                                        {% if offre.typeOffre == 'Part-time' %}
+                                            <span class="label label-warning">Part-time</span>
+                                        {% endif %}
+                                        {% if offre.typeOffre == 'Freelance' %}
+                                            <span class="label label-info">Freelance</span>
+                                        {% endif %}</h5>
+                                </div>
+                                <time datetime="2016-03-10 20:00">{% if offre.dateOffre %}{{ offre.dateOffre|date('Y-m-d') }}{% endif %}</time>
+                            </header>
+
+                            <div class="item-body">
+                                <p>{{ offre.descriptionOffre }}</p>
+                            </div>
+
+                            <footer>
+                                <ul class="details cols-3">
+                                    <li>
+                                        <i class="fa fa-map-marker"></i>
+                                        <span>{{ offre.LocationOffre }}</span>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-money"></i>
+                                        <span>{{ offre.salaireOffre }} DT / month</span>
+                                    </li>
+
+                                    <li>
+                                        <i class="fa fa-certificate"></i>
+                                        <span>{{ offre.langageOffre }}</span>
+                                    </li>
+                                </ul>
+                            </footer>
+                        </a>
+                    </div>
+                    <!-- END Job item -->
+                    {% endfor %}
+
+
+                </div>
+
+
+                <!-- Page navigation -->
+                <nav class="text-center">
+                    <ul class="pagination">
+                        <li>
+                            <a href="#" aria-label="Previous">
+                                <i class="ti-angle-left"></i>
+                            </a>
+                        </li>
+                        <li><a href="#">1</a></li>
+                        <li class="active"><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li>
+                            <a href="#" aria-label="Next">
+                                <i class="ti-angle-right"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- END Page navigation -->
+
+            </div>
+        </section>
+    </main>
+    <!-- END Main container -->
+{% endblock %}
